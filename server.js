@@ -139,6 +139,6 @@ app.get('/post/:id', async (req, res) => {
 })
 
 // app.listen(PORT);
-server.listen(PORT, ()=>  {
+app.listen(PORT, ()=>  {
     console.log('listening to port ',PORT)
 })

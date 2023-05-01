@@ -14,6 +14,7 @@ const fs = require('fs');
 const salt = bcrypt.genSaltSync(10);
 const secret = 'asdfe45we45w345wegw345werjktjwertkj';
 
+const PORT = process.env.PORT ||
 app.use(cors({credentials:true,origin:['http://localhost:3000',"https://mern-blog-app-6zzs.onrender.com"],}));
 app.use(express.json());
 app.use(cookieParser());
@@ -138,5 +139,12 @@ app.get('/post/:id', async (req, res) => {
   res.json(postDoc);
 })
 
+<<<<<<< HEAD
 app.listen(PORT);
 //
+=======
+// app.listen(PORT);
+app.listen(PORT, ()=>  {
+    console.log('listening to port ',PORT)
+})
+>>>>>>> 472dfb3fc3d51494678d49e014b1fbefcafd387a
